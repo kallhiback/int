@@ -10,12 +10,25 @@ export default function App() {
   };
 
   const handleButtonClick = () => {
-    const newCard = {
-      content: inputValue,
-    };
-    setCards([...cards, newCard]);
-    setInputValue('');
+    if(inputValue !== ''){
+      const newCard = {
+        content: inputValue,
+      };
+      setCards([...cards, newCard]);
+      setInputValue('');
+    } else {
+      alert('plohoi malchick')
+    }
   };
+
+  function handleBlackChange()  {
+    const body = document.querySelector('body')
+    if(body.style.backgroundColor === 'black'){
+        body.style.backgroundColor = 'white'
+    } else {
+      body.style.backgroundColor = 'black'
+    }
+  }
 
   return (
     <div className="zam">
@@ -42,6 +55,7 @@ export default function App() {
           >
             Add
           </button>
+          <button className="whack" onClick={handleBlackChange}></button>
         </div>  
       </div>
         <div className="cards">
