@@ -21,7 +21,7 @@ export default function App() {
     }
   };
 
-  function handleBlackChange()  {
+  function handleBlackChange() {
     const body = document.querySelector('body')
     if(body.style.backgroundColor === 'black'){
         body.style.backgroundColor = 'white'
@@ -68,3 +68,4 @@ export default function App() {
     </div>
   );
 }
+
